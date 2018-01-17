@@ -126,8 +126,6 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        UIPasteboard.general.string = selectedCell.labelText.text
-        
         tableView.deselectRow(at: indexPath, animated: true)
         
         let resultCell = tableView.cellForRow(at: indexPath) as! MainTextListCell

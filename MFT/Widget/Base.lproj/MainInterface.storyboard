@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="NotoSans-Regular.ttf">
+            <string>NotoSans-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Today View Controller-->
         <scene sceneID="cwh-vc-ff4">
@@ -28,22 +33,37 @@
                                             <constraint firstAttribute="height" constant="45" id="XV0-xB-HVs"/>
                                         </constraints>
                                         <state key="normal" image="ic_account_balance_48pt"/>
+                                        <connections>
+                                            <action selector="buttonCopyAction:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="M9P-hT-Wds"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQm-aL-CnN">
                                         <rect key="frame" x="61" y="32.5" width="45" height="45"/>
                                         <state key="normal" image="ic_account_balance_48pt"/>
+                                        <connections>
+                                            <action selector="buttonCopyAction:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="0eJ-0e-iR7"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2JV-UD-m9s">
                                         <rect key="frame" x="121.5" y="32.5" width="45" height="45"/>
                                         <state key="normal" image="ic_account_balance_48pt"/>
+                                        <connections>
+                                            <action selector="buttonCopyAction:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="rGM-5C-jgA"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AfL-y8-RHu">
                                         <rect key="frame" x="182.5" y="32.5" width="45" height="45"/>
                                         <state key="normal" image="ic_account_balance_48pt"/>
+                                        <connections>
+                                            <action selector="buttonCopyAction:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="09o-pF-u4P"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TpS-fd-8Us">
                                         <rect key="frame" x="243" y="32.5" width="45" height="45"/>
                                         <state key="normal" image="ic_account_balance_48pt"/>
+                                        <connections>
+                                            <action selector="buttonCopyAction:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="RGt-6n-ypn"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -57,18 +77,35 @@
                                     <constraint firstItem="JQm-aL-CnN" firstAttribute="height" secondItem="Rud-zt-YhR" secondAttribute="height" id="t8x-bN-Epm"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pgf-5o-R69">
+                                <rect key="frame" x="0.0" y="102" width="320" height="0.0"/>
+                                <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <constraints>
                             <constraint firstItem="ssy-KU-ocm" firstAttribute="bottom" secondItem="Pfn-HK-bkg" secondAttribute="bottom" id="6qo-KR-qLt"/>
                             <constraint firstItem="Pfn-HK-bkg" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" constant="16" id="L49-37-a6R"/>
                             <constraint firstItem="ssy-KU-ocm" firstAttribute="top" secondItem="Pfn-HK-bkg" secondAttribute="top" id="RWa-Mg-r0c"/>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="pgf-5o-R69" secondAttribute="trailing" id="U8w-Oy-Ulc"/>
                             <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="Pfn-HK-bkg" secondAttribute="trailing" constant="16" id="aKY-0X-TWi"/>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="bottom" secondItem="pgf-5o-R69" secondAttribute="bottom" constant="8" id="jLk-09-4Yb"/>
+                            <constraint firstItem="pgf-5o-R69" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" id="zbt-br-eXk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ssy-KU-ocm"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="110"/>
+                    <connections>
+                        <outlet property="button1stText" destination="Rud-zt-YhR" id="juv-DQ-4g7"/>
+                        <outlet property="button2ndText" destination="JQm-aL-CnN" id="ULl-ys-SX4"/>
+                        <outlet property="button3rdText" destination="2JV-UD-m9s" id="GcY-eN-W7d"/>
+                        <outlet property="button4thText" destination="AfL-y8-RHu" id="9ti-kI-Lkp"/>
+                        <outlet property="button5thText" destination="TpS-fd-8Us" id="tjh-GC-Ht4"/>
+                        <outlet property="labelResult" destination="pgf-5o-R69" id="Zyd-t4-4LS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
