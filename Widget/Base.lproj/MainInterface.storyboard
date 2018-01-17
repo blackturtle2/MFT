@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Today View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" customModule="Widget" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Pfn-HK-bkg">
+                                <rect key="frame" x="16" y="0.0" width="288" height="110"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rud-zt-YhR">
+                                        <rect key="frame" x="0.0" y="32.5" width="45" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="45" id="3th-Qf-PCy"/>
+                                            <constraint firstAttribute="height" constant="45" id="XV0-xB-HVs"/>
+                                        </constraints>
+                                        <state key="normal" image="ic_account_balance_48pt"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQm-aL-CnN">
+                                        <rect key="frame" x="61" y="32.5" width="45" height="45"/>
+                                        <state key="normal" image="ic_account_balance_48pt"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2JV-UD-m9s">
+                                        <rect key="frame" x="121.5" y="32.5" width="45" height="45"/>
+                                        <state key="normal" image="ic_account_balance_48pt"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AfL-y8-RHu">
+                                        <rect key="frame" x="182.5" y="32.5" width="45" height="45"/>
+                                        <state key="normal" image="ic_account_balance_48pt"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TpS-fd-8Us">
+                                        <rect key="frame" x="243" y="32.5" width="45" height="45"/>
+                                        <state key="normal" image="ic_account_balance_48pt"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="AfL-y8-RHu" firstAttribute="width" secondItem="Rud-zt-YhR" secondAttribute="width" id="4sZ-BO-pfI"/>
+                                    <constraint firstItem="JQm-aL-CnN" firstAttribute="width" secondItem="Rud-zt-YhR" secondAttribute="width" id="Eg6-rl-qwU"/>
+                                    <constraint firstItem="TpS-fd-8Us" firstAttribute="height" secondItem="Rud-zt-YhR" secondAttribute="height" id="NMf-5b-SsB"/>
+                                    <constraint firstItem="2JV-UD-m9s" firstAttribute="height" secondItem="Rud-zt-YhR" secondAttribute="height" id="Uiy-zL-50l"/>
+                                    <constraint firstItem="2JV-UD-m9s" firstAttribute="width" secondItem="Rud-zt-YhR" secondAttribute="width" id="aig-tg-zxA"/>
+                                    <constraint firstItem="AfL-y8-RHu" firstAttribute="height" secondItem="Rud-zt-YhR" secondAttribute="height" id="ezi-e4-Tet"/>
+                                    <constraint firstItem="TpS-fd-8Us" firstAttribute="width" secondItem="Rud-zt-YhR" secondAttribute="width" id="hx8-cR-mfl"/>
+                                    <constraint firstItem="JQm-aL-CnN" firstAttribute="height" secondItem="Rud-zt-YhR" secondAttribute="height" id="t8x-bN-Epm"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="bottom" secondItem="Pfn-HK-bkg" secondAttribute="bottom" id="6qo-KR-qLt"/>
+                            <constraint firstItem="Pfn-HK-bkg" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" constant="16" id="L49-37-a6R"/>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="top" secondItem="Pfn-HK-bkg" secondAttribute="top" id="RWa-Mg-r0c"/>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="Pfn-HK-bkg" secondAttribute="trailing" constant="16" id="aKY-0X-TWi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ssy-KU-ocm"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="110"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_account_balance_48pt" width="48" height="48"/>
+    </resources>
+</document>
