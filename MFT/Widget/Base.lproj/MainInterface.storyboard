@@ -77,8 +77,8 @@
                                     <constraint firstItem="JQm-aL-CnN" firstAttribute="height" secondItem="Rud-zt-YhR" secondAttribute="height" id="t8x-bN-Epm"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pgf-5o-R69">
-                                <rect key="frame" x="0.0" y="102" width="320" height="0.0"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pgf-5o-R69">
+                                <rect key="frame" x="16" y="102" width="288" height="0.0"/>
                                 <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -88,10 +88,10 @@
                             <constraint firstItem="ssy-KU-ocm" firstAttribute="bottom" secondItem="Pfn-HK-bkg" secondAttribute="bottom" id="6qo-KR-qLt"/>
                             <constraint firstItem="Pfn-HK-bkg" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" constant="16" id="L49-37-a6R"/>
                             <constraint firstItem="ssy-KU-ocm" firstAttribute="top" secondItem="Pfn-HK-bkg" secondAttribute="top" id="RWa-Mg-r0c"/>
-                            <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="pgf-5o-R69" secondAttribute="trailing" id="U8w-Oy-Ulc"/>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="pgf-5o-R69" secondAttribute="trailing" constant="16" id="U8w-Oy-Ulc"/>
                             <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="Pfn-HK-bkg" secondAttribute="trailing" constant="16" id="aKY-0X-TWi"/>
                             <constraint firstItem="ssy-KU-ocm" firstAttribute="bottom" secondItem="pgf-5o-R69" secondAttribute="bottom" constant="8" id="jLk-09-4Yb"/>
-                            <constraint firstItem="pgf-5o-R69" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" id="zbt-br-eXk"/>
+                            <constraint firstItem="pgf-5o-R69" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" constant="16" id="zbt-br-eXk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ssy-KU-ocm"/>
                     </view>

@@ -1,5 +1,5 @@
 //
-//  AddTextSelectIconCollectionViewCell.swift
+//  AddTextSelectIconCell.swift
 //  MFT
 //
 //  Created by leejaesung on 2018. 1. 14..
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddTextSelectIconCollectionViewCell: UICollectionViewCell {
+class AddTextSelectIconCell: UICollectionViewCell {
     
     @IBOutlet weak var imageViewIcon: UIImageView!
     @IBOutlet weak var imageViewRedCheck: UIImageView!

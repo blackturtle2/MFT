@@ -13,7 +13,7 @@ class MainTextListCell: UITableViewCell {
     @IBOutlet weak var imageViewIcon: UIImageView!
     @IBOutlet weak var labelText: UILabel!
     
-    var thisData: [String]?
+    var thisData: MFT_Text?
     
     override func awakeFromNib() {
         super.awakeFromNib()

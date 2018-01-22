@@ -15,68 +15,86 @@ class MainViewController: UIViewController, AddTextViewControllerDelegate {
     @IBOutlet weak var buttonAdd: UIButton!
     @IBOutlet weak var grayBGView: UIView!
     
-    var savedTextDataArray:[[String]]?
+    var savedTextDataArray:[MFT_Text]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // delegate & dataSource
+        // Delegate & DataSource
         self.mainTableView.delegate = self
         self.mainTableView.dataSource = self
         
-        // 텍스트 추가 버튼 코너 라운드 먹이기.
+        // UI: 텍스트 추가 버튼 코너 라운드 먹이기.
         self.buttonAdd.layer.cornerRadius = self.buttonAdd.frame.width / 2
         
+        // Configure: User Defaults.
         self.configureUserDefaults()
 
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     
     // MARK: 앱 처음 실행시, UserDefaults 초기화
     func configureUserDefaults() {
-        // 1: 통장
-        if UserDefaults.init(suiteName: Constants.savedUserDefaults)?.value(forKey: "MFT_01") == nil {
-            UserDefaults(suiteName: Constants.savedUserDefaults)?.set(["MFT_01", "ic_payment_48pt","MyBank 123-456789-00"], forKey: "MFT_01")
-        }
-        if let data01 = UserDefaults(suiteName: Constants.savedUserDefaults)?.value(forKey: "MFT_01") as? [String] {
-            self.savedTextDataArray = [data01]
-        }
-        
-        // 2: 집 주소
-        if UserDefaults.init(suiteName: Constants.savedUserDefaults)?.value(forKey: "MFT_02") == nil {
-            UserDefaults(suiteName: Constants.savedUserDefaults)?.set(["MFT_02", "ic_home_48pt","161, Sajik-ro, Jongno-gu, Seoul, Republic of Korea"], forKey: "MFT_02")
-        }
-        if let data02 = UserDefaults(suiteName: Constants.savedUserDefaults)?.value(forKey: "MFT_02") as? [String] {
-            self.savedTextDataArray?.append(data02)
+        // 00: 통장
+        if UserDefaults.init(suiteName: Constants.savedUserDefaults)?.value(forKey: "text00") == nil {
+            let data = MFT_Text(keyID: "text00",
+                                iconImageName: "ic_payment_48pt",
+                                text: "MyBank 123-456789-00")
+            UserDefaults(suiteName: Constants.savedUserDefaults)?.set(data.getDicData(), forKey: "text00")
         }
         
-        // 3: 이메일
-        if UserDefaults.init(suiteName: Constants.savedUserDefaults)?.value(forKey: "MFT_03") == nil {
-            UserDefaults(suiteName: Constants.savedUserDefaults)?.set(["MFT_03", "ic_email_48pt","my_email@address.com"], forKey: "MFT_03")
-        }
-        if let data03 = UserDefaults(suiteName: Constants.savedUserDefaults)?.value(forKey: "MFT_03") as? [String] {
-            self.savedTextDataArray?.append(data03)
-        }
-        
-        // 4: 폰 넘버
-        if UserDefaults.init(suiteName: Constants.savedUserDefaults)?.value(forKey: "MFT_04") == nil {
-            UserDefaults(suiteName: Constants.savedUserDefaults)?.set(["MFT_04", "ic_phone_iphone_48pt","010-0516-0412"], forKey: "MFT_04")
-        }
-        if let data04 = UserDefaults(suiteName: Constants.savedUserDefaults)?.value(forKey: "MFT_04") as? [String] {
-            self.savedTextDataArray?.append(data04)
+        // 01: 집 주소
+        if UserDefaults.init(suiteName: Constants.savedUserDefaults)?.value(forKey: "text01") == nil {
+            let data = MFT_Text(keyID: "text01",
+                                iconImageName: "ic_home_48pt",
+                                text: "161, Sajik-ro, Jongno-gu, Seoul, Republic of Korea")
+            
+            UserDefaults(suiteName: Constants.savedUserDefaults)?.set(data.getDicData(), forKey: "text01")
         }
         
-        // 5: 인스타그램
-        if UserDefaults.init(suiteName: Constants.savedUserDefaults)?.value(forKey: "MFT_05") == nil {
-            UserDefaults(suiteName: Constants.savedUserDefaults)?.set(["MFT_05", "ic_camera_alt_48pt","#travel #traveller #travelgram #blogger #sunshine #holidays #vacation #trips #instalove #Seoul #Korea"], forKey: "MFT_05")
+        // 02: 이메일
+        if UserDefaults.init(suiteName: Constants.savedUserDefaults)?.value(forKey: "text02") == nil {
+            let data = MFT_Text(keyID: "text02",
+                                iconImageName: "ic_email_48pt",
+                                text: "my_email@address.com")
+            
+            UserDefaults(suiteName: Constants.savedUserDefaults)?.set(data.getDicData(), forKey: "text02")
         }
-        if let data05 = UserDefaults(suiteName: Constants.savedUserDefaults)?.value(forKey: "MFT_05") as? [String] {
-            self.savedTextDataArray?.append(data05)
+        
+        // 03: 폰 넘버
+        if UserDefaults.init(suiteName: Constants.savedUserDefaults)?.value(forKey: "text03") == nil {
+            let data = MFT_Text(keyID: "text03",
+                                iconImageName: "ic_phone_iphone_48pt",
+                                text: "010-0516-0412")
+            
+            UserDefaults(suiteName: Constants.savedUserDefaults)?.set(data.getDicData(), forKey: "text03")
+        }
+        
+        // 04: 인스타그램
+        if UserDefaults.init(suiteName: Constants.savedUserDefaults)?.value(forKey: "text04") == nil {
+            let data = MFT_Text(keyID: "text04",
+                                iconImageName: "ic_camera_alt_48pt",
+                                text: "#travel #traveller #travelgram #blogger #sunshine #holidays #vacation #trips #instalove #Seoul #Korea")
+            
+            UserDefaults(suiteName: Constants.savedUserDefaults)?.set(data.getDicData(), forKey: "text04")
+        }
+        
+        // 전역 변수 초기화
+        if let data00 = UserDefaults(suiteName: Constants.savedUserDefaults)?.value(forKey: "text00") as? [String : String],
+            let data01 = UserDefaults(suiteName: Constants.savedUserDefaults)?.value(forKey: "text01") as? [String : String],
+            let data02 = UserDefaults(suiteName: Constants.savedUserDefaults)?.value(forKey: "text02") as? [String : String],
+            let data03 = UserDefaults(suiteName: Constants.savedUserDefaults)?.value(forKey: "text03") as? [String : String],
+            let data04 = UserDefaults(suiteName: Constants.savedUserDefaults)?.value(forKey: "text04") as? [String : String] {
+            
+            self.savedTextDataArray = [MFT_Text(withDicData: data00)]
+            self.savedTextDataArray?.append(MFT_Text(withDicData: data01))
+            self.savedTextDataArray?.append(MFT_Text(withDicData: data02))
+            self.savedTextDataArray?.append(MFT_Text(withDicData: data03))
+            self.savedTextDataArray?.append(MFT_Text(withDicData: data04))
         }
         
         self.mainTableView.reloadData()
@@ -102,6 +120,8 @@ class MainViewController: UIViewController, AddTextViewControllerDelegate {
         self.grayBGView.isHidden = true
         self.configureUserDefaults()
         self.mainTableView.reloadData()
+        
+        Toast(text: "Saved complete-!").show()
     }
     
 }
@@ -119,8 +139,8 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         let currentData = realSavedTextDataArray[indexPath.row]
         
         resultCell.thisData = realSavedTextDataArray[indexPath.row]
-        resultCell.imageViewIcon.image = UIImage(named: currentData[1])
-        resultCell.labelText.text = currentData[2]
+        resultCell.imageViewIcon.image = UIImage(named: currentData.iconImageName)
+        resultCell.labelText.text = currentData.text
         
         return resultCell
     }

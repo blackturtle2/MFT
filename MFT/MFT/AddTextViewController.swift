@@ -21,7 +21,7 @@ class AddTextViewController: UIViewController {
     
     @IBOutlet weak var constraintContentsViewHeight: NSLayoutConstraint!
     
-    var thisData: [String]?
+    var thisData: MFT_Text?
     
     let iconArray = ["ic_payment_48pt",
                      "ic_home_48pt",
@@ -68,8 +68,8 @@ class AddTextViewController: UIViewController {
         self.addKeyboardNotificationObserver()
         
         if let realThisData = self.thisData {
-            self.selectedIconString = realThisData[1]
-            self.textFieldMyFavoriteText.text = realThisData[2]
+            self.selectedIconString = realThisData.iconImageName
+            self.textFieldMyFavoriteText.text = realThisData.text
         }
         
     }
@@ -149,10 +149,9 @@ class AddTextViewController: UIViewController {
         guard let realThisData = self.thisData else { return }
         let realSelectedIconString = self.selectedIconString
         let realMyFavoriteText = self.textFieldMyFavoriteText.text
+        let savedTextData = MFT_Text(keyID: realThisData.keyID, iconImageName: realSelectedIconString, text: realMyFavoriteText)
         
-        UserDefaults(suiteName: Constants.savedUserDefaults)?.set([realThisData[0],
-                                                                   realSelectedIconString,
-                                                                   realMyFavoriteText], forKey: realThisData[0])
+        UserDefaults(suiteName: Constants.savedUserDefaults)?.set(savedTextData.getDicData(), forKey: realThisData.keyID)
         
         self.dismiss(animated: true) {
             self.delegate.completeAddText()
@@ -170,7 +169,7 @@ extension AddTextViewController: UICollectionViewDelegate, UICollectionViewDataS
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let resultCell = collectionView.dequeueReusableCell(withReuseIdentifier: "AddTextSelectIconCollectionViewCell", for: indexPath) as! AddTextSelectIconCollectionViewCell
+        let resultCell = collectionView.dequeueReusableCell(withReuseIdentifier: "AddTextSelectIconCell", for: indexPath) as! AddTextSelectIconCell
         resultCell.imageViewIcon.image = UIImage(named: self.iconArray[indexPath.row])
         resultCell.selectedIconName = self.iconArray[indexPath.row]
         
@@ -185,7 +184,7 @@ extension AddTextViewController: UICollectionViewDelegate, UICollectionViewDataS
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selectedCell = collectionView.cellForItem(at: indexPath) as! AddTextSelectIconCollectionViewCell
+        let selectedCell = collectionView.cellForItem(at: indexPath) as! AddTextSelectIconCell
         
         // 레드 체크 버튼 활성화.
         selectedCell.imageViewRedCheck.isHidden = false

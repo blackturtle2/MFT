@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		0EEB5EA7DA093CB7651CA448 /* Pods_Widget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75813B6EABA2437A1C4CA04B /* Pods_Widget.framework */; };
 		9ED5DC13610221CABFF98E0E /* Pods_MFT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F489F9C5256634E7E7424D84 /* Pods_MFT.framework */; };
-		FE878155200B8BDF00DCD114 /* AddTextSelectIconCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE878154200B8BDF00DCD114 /* AddTextSelectIconCollectionViewCell.swift */; };
+		FE58C73720161B7500798004 /* DataCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE58C73620161B7500798004 /* DataCenter.swift */; };
+		FE878155200B8BDF00DCD114 /* AddTextSelectIconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE878154200B8BDF00DCD114 /* AddTextSelectIconCell.swift */; };
 		FE878159200BA8D100DCD114 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE878158200BA8D100DCD114 /* Constants.swift */; };
 		FE87815A200BA8D100DCD114 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE878158200BA8D100DCD114 /* Constants.swift */; };
 		FECF6A86200CCB6D00745288 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FED96361200A58DA0077DB52 /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 		FED9638A200A604A0077DB52 /* NotoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FED96384200A60490077DB52 /* NotoSans-Regular.ttf */; };
 		FED9638D200A673F0077DB52 /* MainTextListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED9638C200A673F0077DB52 /* MainTextListCell.swift */; };
 		FED96390200A756C0077DB52 /* AddTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED9638F200A756C0077DB52 /* AddTextViewController.swift */; };
+		FEEEF72420162CBF00974BF3 /* DataCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE58C73620161B7500798004 /* DataCenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +65,8 @@
 		75813B6EABA2437A1C4CA04B /* Pods_Widget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Widget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCC8EEB813A4130EB137090A /* Pods-Widget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Widget.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Widget/Pods-Widget.debug.xcconfig"; sourceTree = "<group>"; };
 		F489F9C5256634E7E7424D84 /* Pods_MFT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MFT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE878154200B8BDF00DCD114 /* AddTextSelectIconCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTextSelectIconCollectionViewCell.swift; sourceTree = "<group>"; };
+		FE58C73620161B7500798004 /* DataCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCenter.swift; sourceTree = "<group>"; };
+		FE878154200B8BDF00DCD114 /* AddTextSelectIconCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTextSelectIconCell.swift; sourceTree = "<group>"; };
 		FE878156200BA67E00DCD114 /* MFT.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MFT.entitlements; sourceTree = "<group>"; };
 		FE878157200BA6BF00DCD114 /* Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Widget.entitlements; sourceTree = "<group>"; };
 		FE878158200BA8D100DCD114 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -147,10 +150,11 @@
 				FED9635E200A58DA0077DB52 /* Main.storyboard */,
 				FED9635A200A58DA0077DB52 /* AppDelegate.swift */,
 				FE878158200BA8D100DCD114 /* Constants.swift */,
+				FE58C73620161B7500798004 /* DataCenter.swift */,
 				FED9635C200A58DA0077DB52 /* MainViewController.swift */,
 				FED9638C200A673F0077DB52 /* MainTextListCell.swift */,
 				FED9638F200A756C0077DB52 /* AddTextViewController.swift */,
-				FE878154200B8BDF00DCD114 /* AddTextSelectIconCollectionViewCell.swift */,
+				FE878154200B8BDF00DCD114 /* AddTextSelectIconCell.swift */,
 				FED96366200A58DA0077DB52 /* Info.plist */,
 				FED9638B200A60510077DB52 /* Fonts */,
 			);
@@ -404,8 +408,9 @@
 				FED9638D200A673F0077DB52 /* MainTextListCell.swift in Sources */,
 				FED9635D200A58DA0077DB52 /* MainViewController.swift in Sources */,
 				FED9635B200A58DA0077DB52 /* AppDelegate.swift in Sources */,
+				FE58C73720161B7500798004 /* DataCenter.swift in Sources */,
 				FED96390200A756C0077DB52 /* AddTextViewController.swift in Sources */,
-				FE878155200B8BDF00DCD114 /* AddTextSelectIconCollectionViewCell.swift in Sources */,
+				FE878155200B8BDF00DCD114 /* AddTextSelectIconCell.swift in Sources */,
 				FE878159200BA8D100DCD114 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,6 +419,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEEEF72420162CBF00974BF3 /* DataCenter.swift in Sources */,
 				FED96376200A5F500077DB52 /* TodayViewController.swift in Sources */,
 				FE87815A200BA8D100DCD114 /* Constants.swift in Sources */,
 			);

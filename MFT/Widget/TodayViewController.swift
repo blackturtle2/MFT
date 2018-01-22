@@ -19,7 +19,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     @IBOutlet weak var labelResult: UILabel!
     
-    var savedTextDataArray:[[String]]?
+    var savedTextDataArray:[MFT_Text]?
     
     
     override func viewDidLoad() {
@@ -48,29 +48,17 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     // MARK: - function
     func configureData() {
-        // 1st
-        if let data01 = UserDefaults(suiteName: Constants.savedUserDefaults)?.value(forKey: "MFT_01") as? [String] {
-            self.savedTextDataArray = [data01]
-        }
-        
-        // 2nd
-        if let data02 = UserDefaults(suiteName: Constants.savedUserDefaults)?.value(forKey: "MFT_02") as? [String] {
-            self.savedTextDataArray?.append(data02)
-        }
-        
-        // 3rd
-        if let data03 = UserDefaults(suiteName: Constants.savedUserDefaults)?.value(forKey: "MFT_03") as? [String] {
-            self.savedTextDataArray?.append(data03)
-        }
-        
-        // 4th
-        if let data04 = UserDefaults(suiteName: Constants.savedUserDefaults)?.value(forKey: "MFT_04") as? [String] {
-            self.savedTextDataArray?.append(data04)
-        }
-        
-        // 5th
-        if let data05 = UserDefaults(suiteName: Constants.savedUserDefaults)?.value(forKey: "MFT_05") as? [String] {
-            self.savedTextDataArray?.append(data05)
+        if let data00 = UserDefaults(suiteName: Constants.savedUserDefaults)?.value(forKey: "text00") as? [String:String],
+            let data01 = UserDefaults(suiteName: Constants.savedUserDefaults)?.value(forKey: "text01") as? [String:String],
+            let data02 = UserDefaults(suiteName: Constants.savedUserDefaults)?.value(forKey: "text02") as? [String:String],
+            let data03 = UserDefaults(suiteName: Constants.savedUserDefaults)?.value(forKey: "text03") as? [String:String],
+            let data04 = UserDefaults(suiteName: Constants.savedUserDefaults)?.value(forKey: "text04") as? [String:String] {
+            
+            self.savedTextDataArray = [MFT_Text(withDicData: data00)]
+            self.savedTextDataArray?.append(MFT_Text(withDicData: data01))
+            self.savedTextDataArray?.append(MFT_Text(withDicData: data02))
+            self.savedTextDataArray?.append(MFT_Text(withDicData: data03))
+            self.savedTextDataArray?.append(MFT_Text(withDicData: data04))
         }
         
     }
@@ -78,11 +66,11 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     func configureUI() {
         guard let realSavedTextDataArray = savedTextDataArray else { return }
         
-        self.button1stText.setImage(UIImage(named: realSavedTextDataArray[0][1]), for: .normal)
-        self.button2ndText.setImage(UIImage(named: realSavedTextDataArray[1][1]), for: .normal)
-        self.button3rdText.setImage(UIImage(named: realSavedTextDataArray[2][1]), for: .normal)
-        self.button4thText.setImage(UIImage(named: realSavedTextDataArray[3][1]), for: .normal)
-        self.button5thText.setImage(UIImage(named: realSavedTextDataArray[4][1]), for: .normal)
+        self.button1stText.setImage(UIImage(named: realSavedTextDataArray[0].iconImageName), for: .normal)
+        self.button2ndText.setImage(UIImage(named: realSavedTextDataArray[1].iconImageName), for: .normal)
+        self.button3rdText.setImage(UIImage(named: realSavedTextDataArray[2].iconImageName), for: .normal)
+        self.button4thText.setImage(UIImage(named: realSavedTextDataArray[3].iconImageName), for: .normal)
+        self.button5thText.setImage(UIImage(named: realSavedTextDataArray[4].iconImageName), for: .normal)
     }
     
     
@@ -93,20 +81,20 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         
         switch sender {
         case self.button1stText:
-            UIPasteboard.general.string = realSavedTextDataArray[0][2]
-            self.labelResult.text = "Copied: \"\(realSavedTextDataArray[0][2])\""
+            UIPasteboard.general.string = realSavedTextDataArray[0].text
+            self.labelResult.text = "Copied: \"\(realSavedTextDataArray[0].text ?? "")\""
         case self.button2ndText:
-            UIPasteboard.general.string = realSavedTextDataArray[1][2]
-            self.labelResult.text = "Copied: \"\(realSavedTextDataArray[1][2])\""
+            UIPasteboard.general.string = realSavedTextDataArray[1].text
+            self.labelResult.text = "Copied: \"\(realSavedTextDataArray[1].text ?? "")\""
         case self.button3rdText:
-            UIPasteboard.general.string = realSavedTextDataArray[2][2]
-            self.labelResult.text = "Copied: \"\(realSavedTextDataArray[2][2])\""
+            UIPasteboard.general.string = realSavedTextDataArray[2].text
+            self.labelResult.text = "Copied: \"\(realSavedTextDataArray[2].text ?? "")\""
         case self.button4thText:
-            UIPasteboard.general.string = realSavedTextDataArray[3][2]
-            self.labelResult.text = "Copied: \"\(realSavedTextDataArray[3][2])\""
+            UIPasteboard.general.string = realSavedTextDataArray[3].text
+            self.labelResult.text = "Copied: \"\(realSavedTextDataArray[3].text ?? "")\""
         case self.button5thText:
-            UIPasteboard.general.string = realSavedTextDataArray[4][2]
-            self.labelResult.text = "Copied: \"\(realSavedTextDataArray[4][2])\""
+            UIPasteboard.general.string = realSavedTextDataArray[4].text
+            self.labelResult.text = "Copied: \"\(realSavedTextDataArray[4].text ?? "")\""
             
         default:
             break
