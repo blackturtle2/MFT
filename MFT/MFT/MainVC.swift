@@ -9,7 +9,7 @@
 import UIKit
 import Toaster
 
-class MainVC: UIViewController, AddTextViewControllerDelegate {
+class MainVC: UIViewController {
     
     @IBOutlet weak var mainTableView: UITableView!
     @IBOutlet weak var buttonAdd: UIButton!
@@ -109,21 +109,29 @@ class MainVC: UIViewController, AddTextViewControllerDelegate {
     @IBAction func buttonAddAction(_ sender: UIButton) {
         self.grayBGView.isHidden = false
         
-        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "AddTextViewController") as! AddTextVC
+        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "AddTextVC") as! AddTextVC
         nextVC.delegate = self
         
         self.present(nextVC, animated: true, completion: nil)
     }
     
-    // MARK: AddTextViewControllerDelegate's function.
-    func completeAddText() {
+}
+
+
+// MARK: extension: AddTextVCDelegate
+extension MainVC: AddTextVCDelegate {
+    
+    // MARK: AddTextVCDelegate's function.
+    func completeAddText(isOK: Bool) {
         self.grayBGView.isHidden = true
         self.configureUserDefaults()
         self.mainTableView.reloadData()
         
-        Toast(text: "Saved complete-!").show()
+        if isOK {
+            Toast(text: "Saved complete-!").show()
+        }
     }
-    
+
 }
 
 
@@ -153,7 +161,7 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
         // UI
         self.grayBGView.isHidden = false
         
-        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "AddTextViewController") as! AddTextVC
+        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "AddTextVC") as! AddTextVC
         nextVC.delegate = self
         nextVC.thisData = resultCell.thisData
         

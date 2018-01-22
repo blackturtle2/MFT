@@ -8,8 +8,8 @@
 
 import UIKit
 
-protocol AddTextViewControllerDelegate {
-    func completeAddText()
+protocol AddTextVCDelegate {
+    func completeAddText(isOK: Bool)
 }
 
 class AddTextVC: UIViewController {
@@ -48,7 +48,7 @@ class AddTextVC: UIViewController {
     
     var selectedIconString = "ic_payment_48pt" // 첫 선택 아이콘
     
-    var delegate: AddTextViewControllerDelegate!
+    var delegate: AddTextVCDelegate!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,13 +88,6 @@ class AddTextVC: UIViewController {
             selector: #selector(AddTextVC.keyboardWillShowOrHide(notification:)),
             name: .UIKeyboardWillShow,
             object: nil)
-        
-        // hide keyboard
-//        NotificationCenter.default.addObserver(
-//            self,
-//            selector: #selector(AddTextViewController.keyboardWillShowOrHide(notification:)),
-//            name: .UIKeyboardWillHide,
-//            object: nil)
     }
     
     
@@ -139,7 +132,7 @@ class AddTextVC: UIViewController {
     @IBAction func tapGestureBackgroundViewAction(_ sender: UITapGestureRecognizer) {
         
         self.dismiss(animated: true) {
-            self.delegate.completeAddText()
+            self.delegate.completeAddText(isOK: false)
         }
     }
     
@@ -154,7 +147,7 @@ class AddTextVC: UIViewController {
         UserDefaults(suiteName: Constants.savedUserDefaults)?.set(savedTextData.getDicData(), forKey: realThisData.keyID)
         
         self.dismiss(animated: true) {
-            self.delegate.completeAddText()
+            self.delegate.completeAddText(isOK: true)
         }
     }
     
