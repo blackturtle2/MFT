@@ -15,7 +15,7 @@
 		FE87815A200BA8D100DCD114 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE878158200BA8D100DCD114 /* Constants.swift */; };
 		FECF6A86200CCB6D00745288 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FED96361200A58DA0077DB52 /* Assets.xcassets */; };
 		FED9635B200A58DA0077DB52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED9635A200A58DA0077DB52 /* AppDelegate.swift */; };
-		FED9635D200A58DA0077DB52 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED9635C200A58DA0077DB52 /* MainViewController.swift */; };
+		FED9635D200A58DA0077DB52 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED9635C200A58DA0077DB52 /* MainVC.swift */; };
 		FED96360200A58DA0077DB52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FED9635E200A58DA0077DB52 /* Main.storyboard */; };
 		FED96362200A58DA0077DB52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FED96361200A58DA0077DB52 /* Assets.xcassets */; };
 		FED96365200A58DA0077DB52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FED96363200A58DA0077DB52 /* LaunchScreen.storyboard */; };
@@ -30,7 +30,7 @@
 		FED96389200A604A0077DB52 /* NotoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FED96384200A60490077DB52 /* NotoSans-Regular.ttf */; };
 		FED9638A200A604A0077DB52 /* NotoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FED96384200A60490077DB52 /* NotoSans-Regular.ttf */; };
 		FED9638D200A673F0077DB52 /* MainTextListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED9638C200A673F0077DB52 /* MainTextListCell.swift */; };
-		FED96390200A756C0077DB52 /* AddTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED9638F200A756C0077DB52 /* AddTextViewController.swift */; };
+		FED96390200A756C0077DB52 /* AddTextVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED9638F200A756C0077DB52 /* AddTextVC.swift */; };
 		FEEEF72420162CBF00974BF3 /* DataCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE58C73620161B7500798004 /* DataCenter.swift */; };
 /* End PBXBuildFile section */
 
@@ -72,7 +72,7 @@
 		FE878158200BA8D100DCD114 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FED96357200A58DA0077DB52 /* MFT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MFT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FED9635A200A58DA0077DB52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FED9635C200A58DA0077DB52 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		FED9635C200A58DA0077DB52 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		FED9635F200A58DA0077DB52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FED96361200A58DA0077DB52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FED96364200A58DA0077DB52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -86,7 +86,7 @@
 		FED96383200A60490077DB52 /* NotoSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Medium.ttf"; sourceTree = "<group>"; };
 		FED96384200A60490077DB52 /* NotoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Regular.ttf"; sourceTree = "<group>"; };
 		FED9638C200A673F0077DB52 /* MainTextListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTextListCell.swift; sourceTree = "<group>"; };
-		FED9638F200A756C0077DB52 /* AddTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTextViewController.swift; sourceTree = "<group>"; };
+		FED9638F200A756C0077DB52 /* AddTextVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTextVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,9 +151,9 @@
 				FED9635A200A58DA0077DB52 /* AppDelegate.swift */,
 				FE878158200BA8D100DCD114 /* Constants.swift */,
 				FE58C73620161B7500798004 /* DataCenter.swift */,
-				FED9635C200A58DA0077DB52 /* MainViewController.swift */,
+				FED9635C200A58DA0077DB52 /* MainVC.swift */,
 				FED9638C200A673F0077DB52 /* MainTextListCell.swift */,
-				FED9638F200A756C0077DB52 /* AddTextViewController.swift */,
+				FED9638F200A756C0077DB52 /* AddTextVC.swift */,
 				FE878154200B8BDF00DCD114 /* AddTextSelectIconCell.swift */,
 				FED96366200A58DA0077DB52 /* Info.plist */,
 				FED9638B200A60510077DB52 /* Fonts */,
@@ -406,10 +406,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FED9638D200A673F0077DB52 /* MainTextListCell.swift in Sources */,
-				FED9635D200A58DA0077DB52 /* MainViewController.swift in Sources */,
+				FED9635D200A58DA0077DB52 /* MainVC.swift in Sources */,
 				FED9635B200A58DA0077DB52 /* AppDelegate.swift in Sources */,
 				FE58C73720161B7500798004 /* DataCenter.swift in Sources */,
-				FED96390200A756C0077DB52 /* AddTextViewController.swift in Sources */,
+				FED96390200A756C0077DB52 /* AddTextVC.swift in Sources */,
 				FE878155200B8BDF00DCD114 /* AddTextSelectIconCell.swift in Sources */,
 				FE878159200BA8D100DCD114 /* Constants.swift in Sources */,
 			);

@@ -1,5 +1,5 @@
 //
-//  MainViewController.swift
+//  MainVC.swift
 //  MFT
 //
 //  Created by leejaesung on 2018. 1. 14..
@@ -9,7 +9,7 @@
 import UIKit
 import Toaster
 
-class MainViewController: UIViewController, AddTextViewControllerDelegate {
+class MainVC: UIViewController, AddTextViewControllerDelegate {
     
     @IBOutlet weak var mainTableView: UITableView!
     @IBOutlet weak var buttonAdd: UIButton!
@@ -109,7 +109,7 @@ class MainViewController: UIViewController, AddTextViewControllerDelegate {
     @IBAction func buttonAddAction(_ sender: UIButton) {
         self.grayBGView.isHidden = false
         
-        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "AddTextViewController") as! AddTextViewController
+        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "AddTextViewController") as! AddTextVC
         nextVC.delegate = self
         
         self.present(nextVC, animated: true, completion: nil)
@@ -128,7 +128,7 @@ class MainViewController: UIViewController, AddTextViewControllerDelegate {
 
 
 // MARK: extension: UITableViewDelegate, UITableViewDataSource
-extension MainViewController: UITableViewDelegate, UITableViewDataSource {
+extension MainVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.savedTextDataArray?.count ?? 0
     }
@@ -153,7 +153,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         // UI
         self.grayBGView.isHidden = false
         
-        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "AddTextViewController") as! AddTextViewController
+        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "AddTextViewController") as! AddTextVC
         nextVC.delegate = self
         nextVC.thisData = resultCell.thisData
         

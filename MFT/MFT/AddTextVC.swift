@@ -1,5 +1,5 @@
 //
-//  AddTextViewController.swift
+//  AddTextVC.swift
 //  MFT
 //
 //  Created by leejaesung on 2018. 1. 14..
@@ -12,7 +12,7 @@ protocol AddTextViewControllerDelegate {
     func completeAddText()
 }
 
-class AddTextViewController: UIViewController {
+class AddTextVC: UIViewController {
     
     @IBOutlet weak var seperatedView: UIView!
     @IBOutlet weak var collectionViewSelectIcon: UICollectionView!
@@ -85,7 +85,7 @@ class AddTextViewController: UIViewController {
         // show keyboard
         NotificationCenter.default.addObserver(
             self,
-            selector: #selector(AddTextViewController.keyboardWillShowOrHide(notification:)),
+            selector: #selector(AddTextVC.keyboardWillShowOrHide(notification:)),
             name: .UIKeyboardWillShow,
             object: nil)
         
@@ -163,7 +163,7 @@ class AddTextViewController: UIViewController {
 
 
 // MARK: - extension: UICollectionViewDelegate, UICollectionViewDataSource
-extension AddTextViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension AddTextVC: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.iconArray.count
     }
