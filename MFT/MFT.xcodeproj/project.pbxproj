@@ -9,10 +9,22 @@
 /* Begin PBXBuildFile section */
 		0EEB5EA7DA093CB7651CA448 /* Pods_Widget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75813B6EABA2437A1C4CA04B /* Pods_Widget.framework */; };
 		9ED5DC13610221CABFF98E0E /* Pods_MFT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F489F9C5256634E7E7424D84 /* Pods_MFT.framework */; };
+		FE13BD6B201D0931005F968A /* Utilites.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE13BD6A201D0931005F968A /* Utilites.swift */; };
+		FE13BD6C201D0931005F968A /* Utilites.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE13BD6A201D0931005F968A /* Utilites.swift */; };
 		FE58C73720161B7500798004 /* DataCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE58C73620161B7500798004 /* DataCenter.swift */; };
 		FE878155200B8BDF00DCD114 /* AddTextSelectIconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE878154200B8BDF00DCD114 /* AddTextSelectIconCell.swift */; };
 		FE878159200BA8D100DCD114 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE878158200BA8D100DCD114 /* Constants.swift */; };
 		FE87815A200BA8D100DCD114 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE878158200BA8D100DCD114 /* Constants.swift */; };
+		FE907D41201D005D0029E14A /* SF-Pro-Display-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = FE907D40201D005C0029E14A /* SF-Pro-Display-Heavy.otf */; };
+		FE907D42201D005D0029E14A /* SF-Pro-Display-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = FE907D40201D005C0029E14A /* SF-Pro-Display-Heavy.otf */; };
+		FE907D45201D00820029E14A /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FE907D43201D00810029E14A /* SF-Pro-Text-Bold.otf */; };
+		FE907D46201D00820029E14A /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FE907D43201D00810029E14A /* SF-Pro-Text-Bold.otf */; };
+		FE907D47201D00820029E14A /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FE907D44201D00810029E14A /* SF-Pro-Text-Semibold.otf */; };
+		FE907D48201D00820029E14A /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FE907D44201D00810029E14A /* SF-Pro-Text-Semibold.otf */; };
+		FE907D4B201D00BC0029E14A /* SF-Pro-Text-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = FE907D49201D00BB0029E14A /* SF-Pro-Text-Heavy.otf */; };
+		FE907D4C201D00BC0029E14A /* SF-Pro-Text-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = FE907D49201D00BB0029E14A /* SF-Pro-Text-Heavy.otf */; };
+		FE907D4D201D00BC0029E14A /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = FE907D4A201D00BC0029E14A /* SF-Pro-Text-Regular.otf */; };
+		FE907D4E201D00BC0029E14A /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = FE907D4A201D00BC0029E14A /* SF-Pro-Text-Regular.otf */; };
 		FECF6A86200CCB6D00745288 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FED96361200A58DA0077DB52 /* Assets.xcassets */; };
 		FED9635B200A58DA0077DB52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED9635A200A58DA0077DB52 /* AppDelegate.swift */; };
 		FED9635D200A58DA0077DB52 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED9635C200A58DA0077DB52 /* MainVC.swift */; };
@@ -65,11 +77,17 @@
 		75813B6EABA2437A1C4CA04B /* Pods_Widget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Widget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCC8EEB813A4130EB137090A /* Pods-Widget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Widget.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Widget/Pods-Widget.debug.xcconfig"; sourceTree = "<group>"; };
 		F489F9C5256634E7E7424D84 /* Pods_MFT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MFT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE13BD6A201D0931005F968A /* Utilites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilites.swift; sourceTree = "<group>"; };
 		FE58C73620161B7500798004 /* DataCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCenter.swift; sourceTree = "<group>"; };
 		FE878154200B8BDF00DCD114 /* AddTextSelectIconCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTextSelectIconCell.swift; sourceTree = "<group>"; };
 		FE878156200BA67E00DCD114 /* MFT.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MFT.entitlements; sourceTree = "<group>"; };
 		FE878157200BA6BF00DCD114 /* Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Widget.entitlements; sourceTree = "<group>"; };
 		FE878158200BA8D100DCD114 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FE907D40201D005C0029E14A /* SF-Pro-Display-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Heavy.otf"; sourceTree = "<group>"; };
+		FE907D43201D00810029E14A /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
+		FE907D44201D00810029E14A /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
+		FE907D49201D00BB0029E14A /* SF-Pro-Text-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Heavy.otf"; sourceTree = "<group>"; };
+		FE907D4A201D00BC0029E14A /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
 		FED96357200A58DA0077DB52 /* MFT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MFT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FED9635A200A58DA0077DB52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FED9635C200A58DA0077DB52 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -148,6 +166,7 @@
 				FED96361200A58DA0077DB52 /* Assets.xcassets */,
 				FED96363200A58DA0077DB52 /* LaunchScreen.storyboard */,
 				FED9635E200A58DA0077DB52 /* Main.storyboard */,
+				FE13BD6A201D0931005F968A /* Utilites.swift */,
 				FED9635A200A58DA0077DB52 /* AppDelegate.swift */,
 				FE878158200BA8D100DCD114 /* Constants.swift */,
 				FE58C73620161B7500798004 /* DataCenter.swift */,
@@ -188,6 +207,11 @@
 				FED96382200A60490077DB52 /* NotoSans-Bold.ttf */,
 				FED96383200A60490077DB52 /* NotoSans-Medium.ttf */,
 				FED96384200A60490077DB52 /* NotoSans-Regular.ttf */,
+				FE907D40201D005C0029E14A /* SF-Pro-Display-Heavy.otf */,
+				FE907D43201D00810029E14A /* SF-Pro-Text-Bold.otf */,
+				FE907D44201D00810029E14A /* SF-Pro-Text-Semibold.otf */,
+				FE907D49201D00BB0029E14A /* SF-Pro-Text-Heavy.otf */,
+				FE907D4A201D00BC0029E14A /* SF-Pro-Text-Regular.otf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -290,10 +314,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE907D4D201D00BC0029E14A /* SF-Pro-Text-Regular.otf in Resources */,
 				FED96389200A604A0077DB52 /* NotoSans-Regular.ttf in Resources */,
 				FED96385200A604A0077DB52 /* NotoSans-Bold.ttf in Resources */,
+				FE907D45201D00820029E14A /* SF-Pro-Text-Bold.otf in Resources */,
+				FE907D41201D005D0029E14A /* SF-Pro-Display-Heavy.otf in Resources */,
 				FED96365200A58DA0077DB52 /* LaunchScreen.storyboard in Resources */,
 				FED96362200A58DA0077DB52 /* Assets.xcassets in Resources */,
+				FE907D47201D00820029E14A /* SF-Pro-Text-Semibold.otf in Resources */,
+				FE907D4B201D00BC0029E14A /* SF-Pro-Text-Heavy.otf in Resources */,
 				FED96360200A58DA0077DB52 /* Main.storyboard in Resources */,
 				FED96387200A604A0077DB52 /* NotoSans-Medium.ttf in Resources */,
 			);
@@ -304,10 +333,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				FED9638A200A604A0077DB52 /* NotoSans-Regular.ttf in Resources */,
+				FE907D46201D00820029E14A /* SF-Pro-Text-Bold.otf in Resources */,
 				FED96386200A604A0077DB52 /* NotoSans-Bold.ttf in Resources */,
 				FED96379200A5F500077DB52 /* MainInterface.storyboard in Resources */,
+				FE907D4C201D00BC0029E14A /* SF-Pro-Text-Heavy.otf in Resources */,
+				FE907D48201D00820029E14A /* SF-Pro-Text-Semibold.otf in Resources */,
+				FE907D4E201D00BC0029E14A /* SF-Pro-Text-Regular.otf in Resources */,
 				FED96388200A604A0077DB52 /* NotoSans-Medium.ttf in Resources */,
 				FECF6A86200CCB6D00745288 /* Assets.xcassets in Resources */,
+				FE907D42201D005D0029E14A /* SF-Pro-Display-Heavy.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +443,7 @@
 				FED9635D200A58DA0077DB52 /* MainVC.swift in Sources */,
 				FED9635B200A58DA0077DB52 /* AppDelegate.swift in Sources */,
 				FE58C73720161B7500798004 /* DataCenter.swift in Sources */,
+				FE13BD6B201D0931005F968A /* Utilites.swift in Sources */,
 				FED96390200A756C0077DB52 /* AddTextVC.swift in Sources */,
 				FE878155200B8BDF00DCD114 /* AddTextSelectIconCell.swift in Sources */,
 				FE878159200BA8D100DCD114 /* Constants.swift in Sources */,
@@ -419,6 +454,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE13BD6C201D0931005F968A /* Utilites.swift in Sources */,
 				FEEEF72420162CBF00974BF3 /* DataCenter.swift in Sources */,
 				FED96376200A5F500077DB52 /* TodayViewController.swift in Sources */,
 				FE87815A200BA8D100DCD114 /* Constants.swift in Sources */,
@@ -582,7 +618,7 @@
 				INFOPLIST_FILE = MFT/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.blackturtle2.MFT;
+				PRODUCT_BUNDLE_IDENTIFIER = net.blackturtle2.MFTdev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -601,7 +637,7 @@
 				INFOPLIST_FILE = MFT/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.blackturtle2.MFT;
+				PRODUCT_BUNDLE_IDENTIFIER = net.blackturtle2.MFTdev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -618,7 +654,7 @@
 				INFOPLIST_FILE = Widget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.blackturtle2.MFT.Widget;
+				PRODUCT_BUNDLE_IDENTIFIER = net.blackturtle2.MFTdev.Widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -636,7 +672,7 @@
 				INFOPLIST_FILE = Widget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.blackturtle2.MFT.Widget;
+				PRODUCT_BUNDLE_IDENTIFIER = net.blackturtle2.MFTdev.Widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
